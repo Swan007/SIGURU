@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Pengumuman</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Dashboard">
+        <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+        <title>Pengumuman</title>
+
+        <!-- Favicons -->
+        <link href="public/img/favicon.png" rel="icon">
+        <link href="public/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Bootstrap core CSS -->
+        <link href="public/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!--external css-->
+        <link href="public/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css">
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker/css/datepicker.css">
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap-daterangepicker/daterangepicker.css">
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap-timepicker/compiled/timepicker.css">
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap-datetimepicker/datertimepicker.css">
+        <!-- Custom styles for this template -->
+        <link href="public/css/style.css" rel="stylesheet">
+        <link href="public/css/style-responsive.css" rel="stylesheet">
+    </head>
+    <link rel="stylesheet" href="/public/css/homepage.css">
+</head>
+
+<body>
+    <%- include('partials/navbar', { activeTab: 'pengumuman' }) %>
+    <section id="main-content">
+        <section class="wrapper">
+        <h3>Pengumuman</h3>
+            <div class="row mt">
+                <div class="col-sm-9">
+                    <section class="panel">
+                        <div class="panel-body minimal">                            
+                            <div class="mail-option">
+                                <ul class="unstyled inbox-pagination">
+                                    <li><span id="sorting-pengumuman"></span></li>
+                                    <li>
+                                        <a class="sort-btn" href="#" id="tanggal-lama"><i class="fa fa-angle-up  pagination-left"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sort-btn" href="#" id="tanggal-baru"><i class="fa fa-angle-down pagination-right"></i>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                            <div class="table-inbox-wrap ">
+                                <table class="table table-inbox table-hover">
+                                    <tbody id="content-pengumuman">
+                                        <!-- content -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <br>
+                            <div class="mail-option">
+                                <ul class="unstyled inbox-pagination">
+                                    <li><span id="pagination-pengumuman"></span></li>
+                                    <li>
+                                        <a class="np-btn" href="#" id="prev-page"><i class="fa fa-angle-left  pagination-left"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="np-btn" href="#" id="next-page"><i class="fa fa-angle-right pagination-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </section>                    
+                </div>
+            </div>
+        </section>
+        <!-- /wrapper -->
+    </section>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+    <script>
+       // Your web app's Firebase configuration
+       var firebaseConfig = {
+          apiKey: "AIzaSyC5UizZtX5FLKKrGvtwHYetCquZ0gne330",
+          authDomain: "database-file-administrasi.firebaseapp.com",
+          databaseURL: "https://database-file-administrasi.firebaseio.com",
+          projectId: "database-file-administrasi",
+          storageBucket: "database-file-administrasi.appspot.com",
+          messagingSenderId: "900232079725",
+          appId: "1:900232079725:web:60c2c507ccb0e65df19264",
+          measurementId: "G-PLCDHCNRHR"
+       }
+       // Initialize Firebase
+       firebase.initializeApp(firebaseConfig);
+       firebase.analytics();
+    </script>
+
+    <script src="/public/js/pengumuman_user.js"></script>
+</body>
+
+</html>

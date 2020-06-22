@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Pengaturan Akun</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Dashboard">
+        <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+        <title>Pengaturan Akun</title>
+
+        <!-- Favicons -->
+        <link href="/public/img/favicon.png" rel="icon">
+        <link href="/public/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Bootstrap core CSS -->
+        <link href="/public/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!--external css-->
+        <link href="public/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-fileupload/bootstrap-fileupload.css">
+        <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-datepicker/css/datepicker.css">
+        <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-daterangepicker/daterangepicker.css">
+        <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-timepicker/compiled/timepicker.css">
+        <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-datetimepicker/datertimepicker.css">
+        <!-- Custom styles for this template -->
+        <link href="/public/css/style.css" rel="stylesheet">
+        <link href="/public/css/style-responsive.css" rel="stylesheet">
+    </head>
+    <link rel="stylesheet" href="/public/css/homepage.css">
+</head>
+
+<body>
+    <%- include('partials/navbar', { activeTab: 'pengaturan' }) %>
+    <section id="main-content">
+        <section class="wrapper">
+            <h3></i> Pengaturan Akun</h3>
+            <!-- BASIC FORM ELELEMNTS -->
+            <div class="row mt">
+                <div class="col-lg-6">
+                    <div class="form-panel">
+                        <h4 class="mb"></i> Informasi Akun</h4>
+                        <form class="form-horizontal style-form">
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">Nama</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input-nama">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">NIP</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input-nip">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">Jabatan</label>
+                                <div class="col-sm-10">
+                                    <p class="form-control-static">Guru</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">Bidang Pelajaran</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input-bidangpelajaran">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">e-Mail</label>
+                                <div class="col-sm-10">
+                                    <p class="form-control-static" id="user-email">ferferos007@gmail.com</p>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="btn btn-theme" type="button" id="submit-profile">Submit</button>
+                    </div>
+                </div>
+                <!-- col-lg-12-->
+            </div>
+
+            <!-- INPUT MESSAGES -->
+            <div class="row mt">
+                <div class="col-lg-6">
+                    <div class="form-panel">
+                        <h4 class="mb"></i> Perbaharui Password</h4>
+                        <form class="form-horizontal tasi-form">
+                            <div class="form-group has-warning">
+                                <label class="col-sm-2 control-label col-lg-2" for="input-passwordlama">Password Lama</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="input-passwordlama">
+                                </div>
+                            </div>
+                            <div class="form-group has-warning">
+                                <label class="col-sm-2 control-label col-lg-2" for="input-passwordbaru">Password Baru</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="input-passwordbaru">
+                                </div>
+                            </div>
+                            <div class="form-group has-error">
+                                <label class="col-sm-2 control-label col-lg-2" for="input-konfirmasipassword">Konfirmasi Password Baru</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="input-konfirmasipassword">
+                                </div>
+                            </div>
+                        </form>
+                        <button class="btn btn-theme" type="button" id="submit-password">Submit</button>
+                    </div>
+                    <!-- /form-panel -->
+                </div>
+                <!-- /col-lg-12 -->
+            </div>
+            <!-- /row -->
+        </section>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+    <script src="/public/js/pengaturan.js"></script>
+</body>
+
+</html>

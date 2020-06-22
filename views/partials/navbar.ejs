@@ -1,0 +1,72 @@
+<header class="header black-bg">
+    <!--logo start-->
+    <a href="/beranda" class="logo"><b>SI<span>GURU</span></b></a>
+    <!--logo end-->
+
+    <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+            <li><a class="logout" href="/keluar">Keluar</a></li>
+        </ul>
+    </div>
+</header>
+
+<aside>
+    <div id="sidebar" class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none;">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+            <li class="mt">
+                <% if (activeTab === 'homepage') { %>
+                <a class="active" href="/beranda">
+                    <i class="fa fa-desktop"></i>
+                    <span>Beranda</span>
+                </a>
+                <%} else { %>
+                <a href="/beranda">
+                    <i class="fa fa-desktop"></i>
+                    <span>Beranda</span>
+                </a>
+                <% } %>
+            </li>
+            <li class="sub-menu dcjq-parent-li">
+                <% if (activeTab === 'dokumen') { %>
+                <a class="active" href="/dokumen">
+                    <i class="fa fa-book"></i>
+                    <span>Dokumen/Berkas</span>
+                </a>
+                <%} else { %>
+                <a href="/dokumen">
+                    <i class="fa fa-book"></i>
+                    <span>Dokumen/Berkas</span>
+                </a>
+                <% } %>
+            </li>
+            <li class="sub-menu dcjq-parent-li">
+                <% if (activeTab === 'pengaturan') { %>
+                <a class="active" href="/pengaturan">
+                    <i class="fa fa-cogs"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <%} else { %>
+                <a href="/pengaturan">
+                    <i class="fa fa-cogs"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <% } %>
+            </li>
+            <li class="sub-menu dcjq-parent-li">
+                <% if (activeTab === 'pengumuman') { %>
+                <a class="active" href="/pengumuman">
+                    <i class="fa fa-envelope"></i>
+                    <span>Pengumuman</span>
+                </a>
+                <%} else { %>
+                <a href="/pengumuman">
+                    <i class="fa fa-envelope"></i>
+                    <span>Pengumuman</span>
+                </a>
+                <% } %>
+            </li>
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>

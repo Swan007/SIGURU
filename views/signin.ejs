@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title> Form </title>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <link rel="stylesheet" href="/public/css/signup.css">
+</head>
+
+<body>
+
+  <div class='brand'>
+  </div>
+  <div class='centered mt login'>
+    <div class='login_title'>
+      <a class="logo"><b>SI<span>GURU</span></b></a>
+    </div>
+    <div class='login_fields'>
+      <div class='login_fields__user'>
+        <div class='icon'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png'>
+        </div>
+        <input placeholder='e-Mail' type='text' id="email">
+        <div class='validation'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+        </div>
+        </input>
+      </div>
+      <div class='login_fields__password'>
+        <div class='icon'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png'>
+        </div>
+        <input placeholder='Kata Sandi' type='password' id="password">
+        <div class='validation'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+        </div>
+      </div>
+      <div class='login_fields__submit'>
+        <input type='submit' value='Masuk' id="btn-signIn">
+      </div>
+      <div class='login_fields__submit'>
+        <div class='forgot'>
+          <a href='/daftar'>Belum memiliki Akun?</a>
+        </div>
+      </div>
+    </div>
+    <div class='disclaimer'>
+      <p>SIGURU: Laman penghubung Admin dan Guru untuk mengurus keperluan dokumen/berkas administrasi akademik.</p>
+    </div>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/public/js/website_guru.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="author" content="Dashboard">
+   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+   <title>Daftar Dokumen</title>
+
+   <!-- Favicons -->
+   <link href="/public/img/favicon.png" rel="icon">
+   <link href="/public/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+   <!-- Bootstrap core CSS -->
+   <!-- <link href="/public/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <!--external css-->
+
+   <link href="/public/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-fileupload/bootstrap-fileupload.css">
+   <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-datepicker/css/datepicker.css">
+   <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-daterangepicker/daterangepicker.css">
+   <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-timepicker/compiled/timepicker.css">
+   <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-datetimepicker/datertimepicker.css">
+   <!-- Custom styles for this template -->
+   <link href="/public/css/style.css" rel="stylesheet">
+   <link href="/public/css/style-responsive.css" rel="stylesheet">
+
+   <!-- =======================================================
+        Template Name: Dashio
+        Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+        Author: TemplateMag.com
+        License: https://templatemag.com/license/
+      ======================================================= -->
+</head>
+
+<body>
+   <%- include('../partials/navbaradmin', { activeTab: 'dokumen' }) %>
+
+   <section id="main-content">
+      <section class="wrapper site-min-height">
+         <br>
+         <h4></i> Melihat Daftar Dokumen/Berkas Administrasi</h4>
+         <div class="row mt">
+            <div class="col-lg-12">
+               <!-- The file upload form used as target for the file upload widget -->
+               <form class="">
+                  <!-- Redirect browsers with JavaScript disabled to the origin page -->
+                  <noscript>
+                     <input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/">
+                  </noscript>
+                  <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                  <div class="row fileupload-buttonbar">
+                     <div class="col-md-6">
+                        <!-- The fileinput-button span is used to style the file input field as button -->
+                        <select class="form-control" id="input-category">
+
+                        </select>
+                     </div>
+                     <div class="col-md-12 mt">
+                        <!-- <button type="button" class="btn btn-success btn-sm pull-left" id="btn-open-add-jenis-dokumen">+
+                           Tambah Jenis Dokumen</button> -->
+                        <button type="button" class="btn btn-success btn-sm pull-left" data-toggle="modal" data-target="#myModal">+
+                           Tambah Jenis Dokumen</button>
+                     </div>
+                     <!-- Modal -->
+                     <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-lg">                           
+
+                           <!-- Modal content-->
+                           <div class="modal-content">
+                              <div class="modal-header">                                 
+                                 <h4 class="mb"></i>Tambah Jenis Dokumen/Berkas Baru</h4>
+                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body">                                 
+                                 <form class="form-horizontal tasi-form">
+                                    <div class="form-group has-warning row">
+                                       <label class="col-sm-3 col-form-label" for="input-jenis">Nama/Jenis
+                                          Dokumen</label>
+                                       <div class="col-lg-9">
+                                          <input type="text" class="form-control" id="input-jenis">
+                                       </div>
+                                    </div>
+                                 </form>
+                                 <button class="btn btn-theme" type="button" id="submit-jenis">Tambahkan</button>
+                              </div>                              
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+            </div>
+
+
+            <div class="col-md-12 row">
+               <div class="col-md-6" style="padding-right: 0px;">
+                  <form class="mail-src-position" action="" style="width: 100%;">
+                     <div class="input-append searchbar" style="padding: 0px; width: 100%;">                        
+                        <input type="text" class="form-control" placeholder="Cari Dokumen/Berkas" id="carian">
+                     </div>
+                  </form>
+               </div>
+            </div>
+
+            <div class="col-md-12 row">
+               <div class="col"> 
+                  <br>                 
+                  <button class="btn btn-success btn-sm pull-left" id="btn-cari">Cari</button>
+               </div>
+            </div>
+            
+            <div class="col-md-12 mt">
+               <div class="content-panel">
+                  <h4>Daftar Dokumen/Berkas</h4>
+                  <hr>
+                  <table class="table table-hover">
+                     <thead>
+                        <tr>
+                           <th>No.</th>
+                           <th>Nama File</th>
+                           <th>Kategori</th>
+                           <th>URL Dokumen</th>
+                        </tr>
+                     </thead>
+                     <tbody id="content-list-dokumen">
+                        <!-- content -->
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+
+            <div class="col-md-12 mt" id="section-jenis-dokumen">
+               <div class="content-panel">
+
+               </div>
+            </div>
+
+         </div>
+
+      </section>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+         crossorigin="anonymous"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+      <script>
+         // Your web app's Firebase configuration
+         var firebaseConfig = {
+            apiKey: "AIzaSyC5UizZtX5FLKKrGvtwHYetCquZ0gne330",
+            authDomain: "database-file-administrasi.firebaseapp.com",
+            databaseURL: "https://database-file-administrasi.firebaseio.com",
+            projectId: "database-file-administrasi",
+            storageBucket: "database-file-administrasi.appspot.com",
+            messagingSenderId: "900232079725",
+            appId: "1:900232079725:web:60c2c507ccb0e65df19264",
+            measurementId: "G-PLCDHCNRHR"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         firebase.analytics();
+      </script>
+      <script src="/public/js/dokumen_admin.js"></script>
+   </section>
+</body>
+
+</html>
