@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 5000;
 const firebase = require('firebase-admin')
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -130,7 +131,7 @@ app.get('/pengumuman_admin', function(req, res, next){
     res.render('admin/pengumuman')
 })
 
-app.listen(5000, function(){
+app.listen(PORT, function(){
     console.log('app.started')
 })
 
