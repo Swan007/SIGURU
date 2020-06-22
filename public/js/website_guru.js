@@ -69,7 +69,7 @@ auth.onAuthStateChanged(function(user){
     // alert("Active User " + email);
     // Berhasil Sign In
   }else{
-    alert("Tidak Ada Pengguna Aktif");
+    // alert("Tidak Ada Pengguna Aktif");
     // Tidak berhasil Sign In
   }
 
